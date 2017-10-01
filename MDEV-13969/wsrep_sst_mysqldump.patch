@@ -1,0 +1,4 @@
+120c120
+< MYSQL="$MYSQL_CLIENT --defaults-extra-file=$WSREP_SST_OPT_CONF "\
+---
+> MYSQL="$MYSQL_CLIENT $WSREP_SST_OPT_CONF "\

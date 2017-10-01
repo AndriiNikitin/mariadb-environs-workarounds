@@ -1,0 +1,8 @@
+247c247
+<   local wr_logfile=$(mktemp wsrep_recovery.XXXXXX)
+---
+>   local wr_logfile=$(mktemp -t wsrep_recovery.XXXXXX)
+269c269
+<   eval_log_error "$mysqld_cmd --wsrep_recover $wr_options 2> $wr_logfile"
+---
+>   eval_log_error "$mysqld_cmd --wsrep_recover $wr_options > $wr_logfile"
