@@ -8,7 +8,7 @@ version=${version%%\-*}
 # directory of this script
 d="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-if [ "$version" != 10.1.28 || "$version" != 10.2.9 ] ; then
+if [ "$version" != 10.1.28 ] || [ "$version" != 10.2.9 ] ; then
   echo no
 elif patch --dry-run --silent $(which wsrep_sst_common) d/wsrep_sst_mysqldump.patch &> /dev/null  ; then
   echo yes
