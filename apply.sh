@@ -5,5 +5,5 @@
 d="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 for workaround in $d/MDEV-* ; do
-  eval "$(bash $workaround/print_fix.sh)"
+  [ -e $workaround/print_fix.sh ] && eval "$(bash $workaround/print_fix.sh)"
 done
